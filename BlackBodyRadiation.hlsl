@@ -1,6 +1,6 @@
 /*
     This function approximates luminance and chromaticity of a black body radiation emitted at the given temperature.
-    Approximation errors are not given, so this function should not be used where computational accuracy is critical!
+    Approximation errors are not provided, so this function should not be used where computational accuracy is critical!
     Instead, the primary purpose of this function is to render a black body surface in real time, which can be used in CG shaders,
     therefore the function is written in HLSL.
     
@@ -16,11 +16,11 @@
     the rgb-components should be multiplied by the alpha-component and by 683.002 lm/W.
     
     sRGB is defined according to ITU-R BT.709:
-                        x       y
-        white point = 0.3127, 0.3290
-        red prime   =   0.64,   0.33
-        green prime =   0.30,   0.60
-        blue prime  =   0.15,	0.06
+                             x       y
+        white point   = 0.3127, 0.3290
+        red primary   =   0.64,   0.33
+        green primary =   0.30,   0.60
+        blue primary  =   0.15,	  0.06
     More details can be found here https://www.desmos.com/calculator/qaxw5zb0zc
     
     T - temperature in degrees Kelvin;
