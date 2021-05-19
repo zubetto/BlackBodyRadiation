@@ -21,7 +21,7 @@
         red prime   =   0.64,   0.33
         green prime =   0.30,   0.60
         blue prime  =   0.15,	0.06
-    More details can be found here https://www.desmos.com/calculator/8pjrrlw951
+    More details can be found here https://www.desmos.com/calculator/qaxw5zb0zc
     
     T - temperature in degrees Kelvin;
     bComputeRadiance - if true, effective radiance is computed;
