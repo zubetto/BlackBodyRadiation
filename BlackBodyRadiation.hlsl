@@ -31,20 +31,20 @@
 */
 float4 BlackBodyRadiation(float T, bool bComputeRadiance, bool bComputeChromaticity)
 {
-    [branch] if(T <= 0.0)
+    if(T <= 0.0)
         return float4(0.0, 0.0, 0.0, 0.0);
 
     float4 ChromaRadiance = {0.0, 0.0, 0.0, 0.0};
     
     // --- Effective radiance in W/(sr*m2) ---
-    [branch] if(bComputeRadiance)
+    if(bComputeRadiance)
         ChromaRadiance.a = 230141698.067 / (exp(25724.2/T) - 1.0);
     
     // luminance Lv = Km*ChromaRadiance.a in cd/m2, where Km = 683.002 lm/W
     
     // --- Chromaticity in linear sRGB ---
     // (i.e. color luminance Y = dot({r,g,b}, {0.2126, 0.7152, 0.0722}) = 1)
-    [branch] if(bComputeChromaticity)
+    if(bComputeChromaticity)
     {
         // --- R ---
         float u = 0.000536332*T;
